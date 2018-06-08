@@ -3,4 +3,9 @@
 
 require File.expand_path('../config/application', __FILE__)
 
+desc "Open an irb session preloaded with this library"
+task :console do
+  sh "irb -rubygems -I lib -I  extra -r whois.rb"
+end
+
 Rails.application.load_tasks
